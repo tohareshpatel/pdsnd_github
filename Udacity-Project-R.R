@@ -59,7 +59,7 @@ head(trip_end_date) #check
 
 ggplot(trip_end_date, aes(x = End_Month)) +
   geom_bar() +
-  geom_text(stat = 'count', aes(label = ..count..,), vjust = -0.5) +
+  geom_text(stat = "count", aes(label = ..count..,), vjust = -0.5) +
   scale_x_continuous(breaks = 1:12) +
   labs(x = "Month", y = "Count") +
   ggtitle("Trip Count by Month")
