@@ -39,7 +39,7 @@ city <- c("ny", "chi", "wash")  # creating a city variable for use in loops.
 trip_end_date <- data.frame() # Create an empty data frame to store the combined column
 
 for (x in city) {
-  df<-get(x) # Retrieve the data frame using the variable value
+  df <- get(x) # Retrieve the data frame using the variable value
   end_time_col <- select(df, End.Time)  # Select the End.Time column
   trip_end_date <- bind_rows(trip_end_date, end_time_col)  # Combine the column with the existing data frame
 }
